@@ -1,0 +1,33 @@
+/* UTILITIES */
+ul{
+    list-style: none;
+}
+
+.container{
+    border: 1px solid black;
+}
+.row{
+    border: 1px solid black;
+}
+
+
+
+
+#dashboard{
+    height:100vh;
+}
+
+.mobile-logo{
+    width:40px;
+}
+
+.logo{
+    padding: 0 20px;
+}
+
+header form{
+    flex-grow: 1;
+    background-color: rgb(229, 229, 229);
+    border-radius: 4px;
+    
+}
