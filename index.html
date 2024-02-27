@@ -1,48 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/34b84b063f.js"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="index.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <div id="dashboard">
-            <header>
-                <div class="container py-2">
-                    <div class="row justify-content-between align-items-center ">
-                        <div class="logo"><img class="mobile-logo" src="./img/mobile-logo.png" alt=""></div>
-                        <div> <i class="fa-solid fa-search"></i> </div>
-                        <form action="">
-                        </form>
-                        <div class="icons">icons</div>
-                    </div>
-                </div>
-            </header>
-            <section></section>
-            <section></section>
-            <main></main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
 
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<div id="app" class="vh-100 d-flex flex-column">
+			<aside class="app__toolbar d-flex align-items-center">
+				<div class="d-flex align-items-center gap-4 w-100 px-3 bg-white ">
+					<a href>
+						<img class="d-md-block d-none" src="./img/logo.svg" alt>
+						<img class=" d-md-none mobile-logo" src="./img/mobile-logo.png" alt>
+					</a>
+					<div class="search-bar flex-grow-1">
+						<span class="search-bar__icon">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</span>
+						<input
+							type="text"
+							class="search-bar__input"
+							placeholder="Prova a cercare: lezioni di Laravel" />
+					</div>
+					<ul class="d-flex gap-4">
+						<li><i class="fa-solid fa-list d-md-inline d-none"></i></li>
+						<li><i class="fa-solid fa-bell d-md-inline d-none"></i></li>
+						<li><i class="fa-solid fa-bell d-md-inline d-none"></i></li>
+						<li><i class="fa-solid fa-bell text-orange "></i></li>
+					</ul>
+				</div>
+			</aside>
 
+			<!-- HEADER -->
 
+			<div class="app__body flex-grow-1 d-flex">
+				<header class="sidebar p-3">
+					<nav class="h-100">
+						<ul class=" h-100 d-flex flex-column text-white py-3 text-center gap-3">
+							<a href><li><i class="fa-solid fa-house"></i><span
+										class="d-md-inline d-none px-3">Home</span></li></a>
+							<a href><li><i class="fa-solid fa-chart-simple"></i><span
+										class="d-md-inline d-none px-3">Stats</span></li></a>
+							<a href><li><i class="fa-solid fa-bell"></i><span
+										class="d-md-inline d-none px-3">Signals</span></li></a>
+							<li class="mt-auto"><i class="fa-solid fa-gear"></i><span
+									class="d-md-inline d-none px-3">Admin</span></li>
+						</ul>
+					</nav>
+				</header>
+				<main class="main-content flex-grow-1">
 
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-    </body>
+					<div class="hero p-2 text-white gap-3">
+						<div class="col-auto new-student">
+							<span>Nuovo Studente </span>
+							<button class="d-inline btn btn-outline-light ms-2"><i
+									class="fa-solid fa-plus"></i></button>
+						</div>
+						<div class="col-auto"><strong class="fs-1 fw-semibold">Boolean</strong>
+							<button class="badge rounded-pill text-bg-secondary"> Piano
+								blaze</button>
+							<div><button class="badge rounded-pill text-bg-secondary"> 3 app</button>
+								<i class="fa-solid fa-angles-right"></i> <button
+									class="badge rounded-pill text-bg-secondary"><i
+										class="fa-solid fa-plus"></i></button> <button
+									class="badge rounded-pill text-bg-secondary mb-button ">Boolean mobile
+									app</button> <button
+									class="badge rounded-pill text-bg-secondary web-app ">Boolean web
+									app</button> <button
+									class="badge rounded-pill text-bg-secondary blog-app">Boolean blog
+									app</button> </div>
+						</div>
+						<div class="col-auto">
+							<div><span>Studenti online negli ultimi 30 minuti</span> </div>
+							<div> <span class="fs-1">125</span></div>
+						</div>
+					</div>
+
+					<section>
+						<div class="d-lg-flex">
+							<div class="d-flex flex-column">
+								<div class="classes">prossime classi</div>
+								<div class="faq">FAQ</div>
+							</div>
+							<div class="d-flex flex-column">
+								<div class="todo">Todo</div>
+								<div class="online-users">Utenti attivi</div>
+							</div>
+
+						</div>
+					</section>
+
+				</main>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+	</body>
 </html>
