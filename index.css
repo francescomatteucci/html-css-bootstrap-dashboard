@@ -11,13 +11,17 @@
 
 input{
     border:0px;
-   
-    
+
 }
 
-a{
+a  {
     text-decoration: none;
     color:white
+}
+
+a .users-stats{
+    text-decoration: underline;
+    color:rgb(15, 60, 193) ;
 }
 
 button {
@@ -82,7 +86,25 @@ button {
     }
 
 
+.card-header{
+    background-color:rgb(247, 247, 247) ;
+    border:1px solid gray;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    font-size: 20px;
+}
 
+.accordion{
+    width:93.5%;
+}
+
+.scroll{
+    overflow: auto;
+}
+
+.hidden{
+    overflow: hidden;
+}
 
 
 /* MEDIA QUERYS */
@@ -120,6 +142,15 @@ button {
     }
 
 }
+
+
+.container,
+.col-lg-8,
+.col-lg-4{
+    borde: 1px solid black;
+}
+
+
 
 
 

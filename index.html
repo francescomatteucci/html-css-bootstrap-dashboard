@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div id="app" class="vh-100 d-flex flex-column">
-			<aside class="app__toolbar d-flex align-items-center">
+			<aside class="app__toolbar d-flex align-items-center hidden">
 				<div class="d-flex align-items-center gap-4 w-100 px-3 bg-white ">
 					<a href>
 						<img class="d-md-block d-none" src="./img/logo.svg" alt>
@@ -36,9 +36,9 @@
 							placeholder="Prova a cercare: lezioni di Laravel" />
 					</div>
 					<ul class="d-flex gap-4">
-						<li><i class="fa-solid fa-list d-md-inline d-none"></i></li>
-						<li><i class="fa-solid fa-bell d-md-inline d-none"></i></li>
-						<li><i class="fa-solid fa-bell d-md-inline d-none"></i></li>
+						<li><i class="fa-solid fa-list d-xl-inline d-none"></i></li>
+						<li><i class="fa-solid fa-bell d-xl-inline d-none"></i></li>
+						<li><i class="fa-solid fa-bell d-xl-inline d-none"></i></li>
 						<li><i class="fa-solid fa-bell text-orange "></i></li>
 					</ul>
 				</div>
@@ -46,7 +46,7 @@
 
 			<!-- HEADER -->
 
-			<div class="app__body flex-grow-1 d-flex">
+			<div class="app__body flex-grow-1 d-flex hidden">
 				<header class="sidebar p-3">
 					<nav class="h-100">
 						<ul class=" h-100 d-flex flex-column text-white py-3 text-center gap-3">
@@ -90,19 +90,139 @@
 					</div>
 
 					<section>
-						<div class="d-lg-flex">
-							<div class="d-flex flex-column">
-								<div class="classes">prossime classi</div>
-								<div class="faq">FAQ</div>
-							</div>
-							<div class="d-flex flex-column">
-								<div class="todo">Todo</div>
-								<div class="online-users">Utenti attivi</div>
-							</div>
+						<div class="container  next-classes scroll">
+							<div class="row gy-3">
+								<div class="col-lg-8">
+									<div class="p-3">
+										<div class="card-header"> <h2>Prossime classi</h2></div>
+										<table class="table">
+											<thead>
+												<tr>
+													<th scope="col">Nome</th>
+													<th scope="col">Data inizio</th>
+													<th scope="col">ROI</th>
+													<th scope="col">Stato</th>
+													<th scope="col">Azioni</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">1</th>
+													<td>Mark</td>
+													<td>Otto</td>
+													<td>@mdo</td>
+													<td>@mdo</td>
+												</tr>
+												<tr>
+													<th scope="row">2</th>
+													<td>Jacob</td>
+													<td>Thornton</td>
+													<td>@fat</td>
+													<td>@fat</td>
+												</tr>
+												<tr>
+													<th scope="row">3</th>
+													<td colspan="2">Larry the Bird</td>
+													<td>@twitter</td>
+													<td>@fat</td>
+												</tr>
+											</tbody>
+										</table></div>
+								</div>
 
+								<div class="col-lg-4 todo">
+									<div class="p-3"><div class="card">
+											<div class="card-header">
+												Todo
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item"><input type="checkbox" name id>
+													<span>Kickoff nuove classi</span></li>
+												<li class="list-group-item"><input type="checkbox" name id>
+													<span>Lezioni su Bootstrap 6 in classe #75</span></li>
+												<li class="list-group-item"><input type="checkbox" name id>
+													<span>Controllare username github studenti</span></li>
+											</ul>
+										</div></div>
+								</div>
+
+								<div class="col-lg-8 f-a-q">
+									<div class="card-header"> <h2>F.A.Q</h2></div>
+									<div class="accordion accordion-flush" id="accordionFlushExample">
+
+										<div class="accordion-item">
+											<h2 class="accordion-header">
+												<button class="accordion-button collapsed" type="button"
+													data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+													aria-expanded="false" aria-controls="flush-collapseOne">
+													Accordion Item #1
+												</button>
+											</h2>
+											<div id="flush-collapseOne" class="accordion-collapse collapse"
+												data-bs-parent="#accordionFlushExample">
+												<div class="accordion-body">Placeholder content for this accordion,
+													which is intended to demonstrate the <code>.accordion-flush</code>
+													class. This is the first item's accordion body.</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header">
+												<button class="accordion-button collapsed" type="button"
+													data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+													aria-expanded="false" aria-controls="flush-collapseTwo">
+													Accordion Item #2
+												</button>
+											</h2>
+											<div id="flush-collapseTwo" class="accordion-collapse collapse"
+												data-bs-parent="#accordionFlushExample">
+												<div class="accordion-body">Placeholder content for this accordion,
+													which is intended to demonstrate the <code>.accordion-flush</code>
+													class. This is the second item's accordion body. Let's imagine this
+													being filled with some actual content.</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header">
+												<button class="accordion-button collapsed" type="button"
+													data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+													aria-expanded="false" aria-controls="flush-collapseThree">
+													Accordion Item #3
+												</button>
+											</h2>
+											<div id="flush-collapseThree" class="accordion-collapse collapse"
+												data-bs-parent="#accordionFlushExample">
+												<div class="accordion-body">Placeholder content for this accordion,
+													which is intended to demonstrate the <code>.accordion-flush</code>
+													class. This is the third item's accordion body. Nothing more
+													exciting happening here in terms of content, but just filling up
+													the space to make it look, at least at first glance, a bit more
+													representative of how this would look in a real-world
+													application.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 users-stats">
+									<div class="p-3"><div class="card">
+											<img src="./img/stats.jpeg" class="card-img-top" alt="...">
+											<div class="card-body">
+												<h5 class="card-title">Utenti attivi</h5>
+												<p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">An item</li>
+												<li class="list-group-item">A second item</li>
+												<li class="list-group-item">A third item</li>
+											</ul>
+											<div class="card-body">
+												<a href="#" class="card-link">Visualizza report approfondita</a>
+											</div>
+										</div></div>
+								</div>
+							</div>
 						</div>
 					</section>
-
 				</main>
 			</div>
 		</div>
